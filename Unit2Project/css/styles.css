@@ -1,0 +1,259 @@
+/*
+Author: Tromen Agustin Villalba
+File Name: styles.css
+Date: 10/14/2024
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3, ul, aside, figure, figcaption{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rules for body and images */
+body {
+    background-color: #b30000;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Style rules for mobile viewport*/
+
+/* Style rules to show mobile class and hide tab-desk class*/
+
+.mobile{
+	display: block;
+}
+
+.tab-desk{
+	display: none;
+}
+
+/*Style rule for header*/
+header h1{
+	padding: 1%;
+	text-align: center;
+	font-family: "Agdasima", sans-serif;
+	font-weight: regular;
+	color: #00ff00;
+}
+
+header h3{
+	padding: 1%;
+	text-align: center;
+	font-family: "Afacad Flux", sans-serif;
+	font-weight: regular;
+	color: #00ff00;
+}
+
+/* Style rules for navigation area */
+nav {
+    background-color: #002233;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    display: block;
+    font-size: 1em;
+    font-family: Calibri, Cambria, sans-serif;
+    font-weight: regular;
+	border-top: 1px solid #ffff00;
+}
+
+nav li a {
+    display: block;
+    color: #ffff00;
+    padding: 1em 1.5em;
+    text-decoration: none;
+}
+
+/*Style rules for main content*/
+
+main {
+	padding: 1%;
+	font-family: "Afacad Flux", sans-serif;
+	font-weight: regular;
+}
+
+main p{
+	font-size: 1.75em;
+	color: #ffffff;
+}
+
+main p:nth-of-type(2){
+	background-color: #ffa500;
+}
+
+main h2{
+	padding: 1%;
+	text-align: center;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	color: #ff9933;
+	font-size:  2em;
+}
+
+main h3{
+	padding: 1%;
+	font-size: 2em;
+}
+
+main ul{
+	list-style-type: square;
+	font-size: 1.5em;
+	color: #ffff00;
+}
+
+/* Style rules for class and id selectors */
+
+.link {
+    color: #051405;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.round{
+	border-radius: 5px;
+}
+
+aside{
+	text-align: center;
+	font-size: 1em;
+	font-weight:regular;
+	text-shadow: 3px 3px 9px #cc9900;
+	color: #00cc00;
+}
+
+figure{
+	border: 3px solid #1a0d00;
+	box-shadow: 5px 5px 9px #999966;
+	max-width: 400px;
+	margin: 1% auto;
+}
+
+figcaption{
+	padding: 1%;
+	border-top: 3px solid #330000;
+	color: #f2f2f2;
+}
+
+#info ul{
+	margin-left: 5%;
+}
+
+/* Style rules for footer content */
+footer {
+    text-align: center;
+    font-size: 1em;
+    background-color: #0000cc;
+    color: #ace600;
+    padding: 1.5% 0;
+}
+
+footer a {
+    color: #ace600;
+    text-decoration: none;
+}
+
+/*Media Query for Tablet Viewport*/
+@media screen and (min-width: 620px){
+	
+	/*Tablet Viewport: Show tab-desk class, hide mobile class*/
+	.tab-desk{
+		display: block;	
+	}
+	
+	.mobile{
+		display: none;
+	}
+	
+	/*Tablet Viewport: Styles rules for nav area*/
+	nav li{
+		border-top: none;
+		display: inline-block;
+		font-size: 1em;
+	}
+	
+	nav li a{
+		padding: 0.75em;
+	}
+	
+	.grid{
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 15px;
+	}
+	
+	aside{
+		grid-column: 1 / span 2;
+	}
+	
+}
+
+/*Media Query for Deskport Viewport*/
+@media screen and (min-width: 1000px){
+		
+	/*Desktop Viewport: Style rules for nav area*/
+	nav li{
+		font-size: 2em;
+	}
+	
+	nav li a{
+		padding: 0.75em 1.75em;
+	}
+	
+	nav li a:hover{
+		color: #33001a;
+		background-color: #66ff33;
+		opacity: 0.75;
+	}
+	
+	/*Desktop Viewport: Style rules for main content*/
+	#info ul{
+		margin-left: 4%;
+	}
+	
+	.grid{
+		grid-template-columns: auto auto auto;
+		grid-gap: 35px;
+	}
+	
+	aside{
+		grid-column: 1 / span 3;
+		font-size: 2em;
+	}
+}
+
+/*Media Query for Large Desktop Viewports*/
+@media screen and (min-width: 1921px){
+	
+	body{
+	background: linear-gradient(#f2e7d9,#674d32)
+	}
+	
+	#wrapper{
+		width: 1920px;
+		margin: 0 auto;
+	}
+	
+	.grid{
+		grid-template-columns: auto auto auto auto;
+	}
+	
+	aside{
+		grid-column: 1 / span 4;
+		font-size: 3em;
+	}
+}
+
+
+
